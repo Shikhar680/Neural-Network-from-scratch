@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    background: #6fc04d;
+    color: #333;
+    text-align: center;
+    padding: 50px;
+    padding-top: 15px;
+    background-size: cover; /* Cover the entire body */
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 2em;
+    color: #7ed957; /* Green color for the header */
+}
+
+.container {
+    background-color: #7ed957;
+    border-radius: 2%;
+    padding: 20px;
+    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.75);
+    display: inline-block;
+}
+
+.image-container {
+    margin: 20px 0; /* Add some margin around the container */
+    display: inline-block; /* Center the container */
+    text-align: left; /* Align text to the left */
+}
+
+.image-text {
+    font-size: 1.2em; /* Increase the font size of the text */
+    margin-bottom: 10px; /* Add space below the text */
+    color: #ffffff; /* Text color */
+}
+
+img {
+    max-width: 300px; /* Limit image width */
+    border: 1px solid #ddd; /* Light border around the image */
+    border-radius: 5px; /* Rounded corners for the image */
+}
+.result{
+    background-color: #ffffff;
+    width: fit-content;
+    height: fit-content;
+    justify-self: center;
+    padding: 2%;
+    padding-bottom: 4%;
+    border-radius: 10%;
+    border: 2pt #41544a;
+    box-shadow: inset 5px 7px 10px  rgba(0, 0, 0, 0.75);
+}
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #7ed957; /* Green button */
+    color: white;
+    text-decoration: none;
+    box-shadow: 3px 7px 10px  rgba(0, 0, 0, 0.75);
+    border-radius: 5px; /* Rounded corners for the link */
+}
+
+a:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <p class="image-text">Image provided:</p>
+            <img src="{{ image }}" alt="Uploaded Image">
+        </div>
+        <br><br>
+        <div class="result">
+            <h1>Prediction Result</h1>
+            <p>The predicted digit is: {{ prediction }}</p>
+            <a href="/">Try Again</a>
+        </div>
+    </div>
+</body>
+</html>
